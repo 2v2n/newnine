@@ -5,6 +5,7 @@ body{
     padding:0;
     overflow-x: hidden;
 }
+
 a{
     color:#333;
     text-decoration: none;
@@ -305,7 +306,6 @@ form#search.focus{
 /************* section hero *******************/
 .slide-container{
     position: relative;
-    z-index: -3;
 }
 .mySlides{
     display: none;
@@ -373,6 +373,10 @@ a.apple{
 }
 
 /***************** SECTION BEST **************/
+#best{
+    padding-bottom: 10px;
+    margin-bottom: 80px;
+}
 .img-best-box{
     display:flex;
     justify-content: center;
@@ -531,4 +535,68 @@ input.sol:checked+span::after{
     background:#176bef;
     top:1px;
     left:1px;
+}
+.slide-page{
+    width: calc(100% + 30px);
+}
+.slide-wrapper{
+    overflow: hidden;
+    position: relative;
+    margin-left: -15px;
+}
+.slide-wrapper-in{
+    width: 300%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.npbtn{
+    position: absolute;
+    font-size: 40px;
+    line-height: 1;
+    text-align: center;
+    top: 530px;
+    z-index: 2;
+    cursor: pointer;
+    color: #999;
+    border: 1px solid #dedede;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0, .125);
+    border-radius: 50%;
+    transition: all 300ms;
+}
+.npbtn:hover{
+    box-shadow: 0 0 10px 0 rgba(0,0,0 .125);
+    background: #efefef;
+}
+#prev{
+    left: -60px;
+}
+#next{
+    right: -60px;
+}
+#page{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    bottom: -10px;
+
+}
+#page li{
+    width: 10px;
+    height: 10px;
+    background-color: #999;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 300ms;
+}
+#page li.active,
+#page li:hover{
+    background-color: #333;
 }
