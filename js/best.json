@@ -1,0 +1,218 @@
+[
+  {
+    "title": "러블리티셔츠",
+    "color": ["white", "skyblue", "navy"],
+    "cost": "450,000",
+    "price": "292,500",
+    "sale": "35%",
+    "img": "./images/001.jpg",
+    "alt": "001"
+  },
+  {
+    "title": "여름니트",
+    "color": ["ivory", "mint"],
+    "cost": "520,000",
+    "price": "338,000",
+    "sale": "35%",
+    "img": "./images/002.jpg",
+    "alt": "002"
+  },
+  {
+    "title": "플레어스커트",
+    "color": ["beige", "black", "pink"],
+    "cost": "380,000",
+    "price": "266,000",
+    "sale": "30%",
+    "img": "./images/003.jpg",
+    "alt": "003"
+  },
+  {
+    "title": "린넨자켓",
+    "color": ["khaki", "white"],
+    "cost": "600,000",
+    "price": "390,000",
+    "sale": "35%",
+    "img": "./images/004.jpg",
+    "alt": "004"
+  },
+  {
+    "title": "크롭셔츠",
+    "color": ["blue", "navy", "white"],
+    "cost": "340,000",
+    "price": "238,000",
+    "sale": "30%",
+    "img": "./images/005.jpg",
+    "alt": "005"
+  },
+  {
+    "title": "루즈핏가디건",
+    "color": ["gray", "black"],
+    "cost": "410,000",
+    "price": "266,500",
+    "sale": "35%",
+    "img": "./images/006.jpg",
+    "alt": "006"
+  },
+  {
+    "title": "베이직슬랙스",
+    "color": ["black", "cream", "mocha"],
+    "cost": "470,000",
+    "price": "305,500",
+    "sale": "35%",
+    "img": "./images/007.jpg",
+    "alt": "007"
+  },
+  {
+    "title": "리본블라우스",
+    "color": ["white", "pink", "lightblue"],
+    "cost": "390,000",
+    "price": "253,500",
+    "sale": "35%",
+    "img": "./images/008.jpg",
+    "alt": "008"
+  },
+  {
+    "title": "심플원피스",
+    "color": ["navy", "green"],
+    "cost": "550,000",
+    "price": "357,500",
+    "sale": "35%",
+    "img": "./images/009.jpg",
+    "alt": "009"
+  },
+  {
+    "title": "셔링티셔츠",
+    "color": ["yellow", "white"],
+    "cost": "310,000",
+    "price": "201,500",
+    "sale": "35%",
+    "img": "./images/010.jpg",
+    "alt": "010"
+  },
+  {
+    "title": "청바지",
+    "color": ["blue", "lightblue"],
+    "cost": "430,000",
+    "price": "275,200",
+    "sale": "36%",
+    "img": "./images/025.jpg",
+    "alt": "025"
+  },
+  {
+    "title": "슬립원피스",
+    "color": ["black", "wine"],
+    "cost": "390,000",
+    "price": "253,500",
+    "sale": "35%",
+    "img": "./images/012.jpg",
+    "alt": "012"
+  },
+  {
+    "title": "카라니트",
+    "color": ["navy", "beige", "white"],
+    "cost": "480,000",
+    "price": "288,000",
+    "sale": "40%",
+    "img": "./images/013.jpg",
+    "alt": "013"
+  },
+  {
+    "title": "퍼프소매티",
+    "color": ["pink", "white"],
+    "cost": "360,000",
+    "price": "252,000",
+    "sale": "30%",
+    "img": "./images/014.jpg",
+    "alt": "014"
+  },
+  {
+    "title": "트렌치코트",
+    "color": ["beige", "camel", "black"],
+    "cost": "600,000",
+    "price": "420,000",
+    "sale": "30%",
+    "img": "./images/015.jpg",
+    "alt": "015"
+  },
+  {
+    "title": "패턴블라우스",
+    "color": ["multi", "white"],
+    "cost": "370,000",
+    "price": "240,500",
+    "sale": "35%",
+    "img": "./images/016.jpg",
+    "alt": "016"
+  },
+  {
+    "title": "보트넥티셔츠",
+    "color": ["gray", "white"],
+    "cost": "330,000",
+    "price": "214,500",
+    "sale": "35%",
+    "img": "./images/017.jpg",
+    "alt": "017"
+  },
+  {
+    "title": "하이웨스트팬츠",
+    "color": ["black", "gray", "khaki"],
+    "cost": "510,000",
+    "price": "331,500",
+    "sale": "35%",
+    "img": "./images/018.jpg",
+    "alt": "018"
+  },
+  {
+    "title": "데님스커트",
+    "color": ["blue", "white"],
+    "cost": "400,000",
+    "price": "280,000",
+    "sale": "30%",
+    "img": "./images/019.jpg",
+    "alt": "019"
+  },
+  {
+    "title": "레이스탑",
+    "color": ["ivory", "beige"],
+    "cost": "350,000",
+    "price": "227,500",
+    "sale": "35%",
+    "img": "./images/020.jpg",
+    "alt": "020"
+  },
+  {
+    "title": "민소매니트",
+    "color": ["green", "white"],
+    "cost": "310,000",
+    "price": "201,500",
+    "sale": "35%",
+    "img": "./images/026.jpg",
+    "alt": "026"
+  },
+  {
+    "title": "체크셔츠",
+    "color": ["red", "black", "white"],
+    "cost": "420,000",
+    "price": "294,000",
+    "sale": "30%",
+    "img": "./images/022.jpg",
+    "alt": "022"
+  },
+  {
+    "title": "슬릿스커트",
+    "color": ["black", "gray"],
+    "cost": "460,000",
+    "price": "299,000",
+    "sale": "35%",
+    "img": "./images/023.jpg",
+    "alt": "023"
+  },
+  {
+    "title": "오버핏셔츠",
+    "color": ["white", "skyblue"],
+    "cost": "370,000",
+    "price": "240,500",
+    "sale": "35%",
+    "img": "./images/024.jpg",
+    "alt": "024"
+  }
+]

@@ -412,9 +412,32 @@ a.apple{
     display:inline-block;
     width:10px;
     height:10px;
+    border: 1px solid #fff;
+    margin: 0 5px ;
     border-radius: 50%;
 }
-.white{
+/* 색상 클래스 정의 */
+.white { background-color: #fff; border: 1px solid #ccc; }
+.skyblue { background-color: skyblue; }
+.navy { background-color: navy; }
+.ivory { background-color: ivory; }
+.mint { background-color: #98ff98; }
+.beige { background-color: beige; }
+.black { background-color: black; }
+.pink { background-color: pink; }
+.blue { background-color: blue; }
+.green { background-color: green; }
+.gray { background-color: gray; }
+.cream { background-color: #f5f5dc; }
+.mocha { background-color: #837060; }
+.lightblue { background-color: lightblue; }
+.yellow { background-color: yellow; }
+.wine { background-color: #722f37; }
+.camel { background-color: #c19a6b; }
+.multi { background: linear-gradient(45deg, red, yellow, blue); }
+.red { background-color: red; }
+.khaki { background-color: khaki; }
+/* .white{
     border:1px solid #333;
     background:#fff;
 }
@@ -426,7 +449,7 @@ a.apple{
 }
 .black{
     background:black;
-}
+} */
 
 .best-title{
     font-size:14px;
