@@ -412,31 +412,30 @@ a.apple{
     display:inline-block;
     width:10px;
     height:10px;
-    border: 1px solid #fff;
     margin: 0 5px ;
     border-radius: 50%;
 }
 /* 색상 클래스 정의 */
-.white { background-color: #fff; border: 1px solid #ccc; }
-.skyblue { background-color: skyblue; }
-.navy { background-color: navy; }
-.ivory { background-color: ivory; }
-.mint { background-color: #98ff98; }
-.beige { background-color: beige; }
-.black { background-color: black; }
-.pink { background-color: pink; }
-.blue { background-color: blue; }
-.green { background-color: green; }
-.gray { background-color: gray; }
-.cream { background-color: #f5f5dc; }
-.mocha { background-color: #837060; }
-.lightblue { background-color: lightblue; }
-.yellow { background-color: yellow; }
-.wine { background-color: #722f37; }
-.camel { background-color: #c19a6b; }
-.multi { background: linear-gradient(45deg, red, yellow, blue); }
-.red { background-color: red; }
-.khaki { background-color: khaki; }
+.white { background-color: #fff; border: 1px solid #1c1c1c; }
+.skyblue { background-color: skyblue; border: 1px solid #1c1c1c;}
+.navy { background-color: navy; border: 1px solid #fff;}
+.ivory { background-color: ivory; border: 1px solid #1c1c1c;}
+.mint { background-color: #98ff98; border: 1px solid #1c1c1c;}
+.beige { background-color: beige; border: 1px solid #1c1c1c;}
+.black { background-color: black; border: 1px solid #fff;}
+.pink { background-color: pink; border: 1px solid #1c1c1c;}
+.blue { background-color: blue; border: 1px solid #fff;}
+.green { background-color: green; border: 1px solid #fff;}
+.gray { background-color: gray; border: 1px solid #1c1c1c;}
+.cream { background-color: #f5f5dc; border: 1px solid #1c1c1c;}
+.mocha { background-color: #837060; border: 1px solid #1c1c1c;}
+.lightblue { background-color: lightblue; border: 1px solid #1c1c1c;}
+.yellow { background-color: yellow; border: 1px solid #1c1c1c;}
+.wine { background-color: #722f37; border: 1px solid #fff;}
+.camel { background-color: #c19a6b; border: 1px solid #1c1c1c;}
+.multi { background: linear-gradient(45deg, red, yellow, blue); border: 1px solid #fff;}
+.red { background-color: red; border: 1px solid #fff;}
+.khaki { background-color: khaki; border: 1px solid #1c1c1c;}
 /* .white{
     border:1px solid #333;
     background:#fff;
