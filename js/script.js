@@ -87,7 +87,8 @@ $(function(){
         updatePage();
 
         const last = $('.slide-wrapper-in .slide-page').last();
-        last.clone().prependTo('.slide-wrapper-in');
+        last.clone().prependTo('.slide-wrapper-in')
+        last.remove()
 
         //css 이용해서 왼쪽으로 미리 이동
         $('.slide-wrapper-in').css('left',  -wrapperWidth + "px");
