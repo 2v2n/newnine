@@ -131,7 +131,7 @@ fetch("./js/best.json")
 
          //상품목록 만들기
          colPage += `
-            <div class="col-md-3 my-3">
+           <div class="col-md-3 my-3">
                         <a href="#" class="img-best-box">
                             <img src="${data.img}" alt="${data.alt}">
                             <div class="pd-best-box text-center">
@@ -146,7 +146,11 @@ fetch("./js/best.json")
                                 </div>
                             </div>
                             <div class="btn-box">
-                                    <button type="button" class="best-cart">
+                                    <button type="button" 
+                                            class="best-cart"   
+                                            data-id="${data.id}" 
+                                            data-list="best"
+                                    >
                                         <i class="ri-shopping-bag-4-line"></i>
                                     </button>
                                     <button type="button" class="best-heart">
@@ -169,7 +173,159 @@ fetch("./js/best.json")
 })
 .catch(err=> console.error("🤢 데이터 로딩에 실패했습니다.", err));
 
-}); //jquery
+fetch('js/list.json')
+  .then(res => res.json())
+  .then(list => {
+    const htmlArr = list.map(data => {
+        //색상처리
+        let colorHtml = data.color.map(co => {
+            return `<span class="${co}"></span>`;
+        }).join("");
+        return `
+                <div class="col-md-3 col-12">
+                    <a href="#" class="mycard">
+                        <div class="card-img">
+                            <img class="card-img-top" src="${data.img}" alt="${data.alt}">
+                                <div class="btn-box">
+                                    <button type="button" 
+                                            class="best-cart"
+                                            data-id="${data.id}" 
+                                            data-list="list"
+                                    >
+                                        <i class="ri-shopping-bag-4-line"></i>
+                                    </button>
+                                    <button type="button" class="best-heart">
+                                        <i class="ri-heart-line"></i>
+                                    </button>
+                                </div><!--/btn-box-->
+                        </div><!--/card-img-->
+                        <div class="card-body">                  
+                            <div class="pd-color">
+                            ${colorHtml}
+                            </div>
+                            <div class="list-title">${data.title}</div>
+                            <div class="pd-list-pay">
+                                <del>${data.cost}원</del>
+                                <span class="sail">${data.sale}</span>
+                                <span class="money">${data.price}원</span>          
+                            </div>
+                        </div><!--card-body-->    
+                    </a> 
+                </div>   <!--/col-->     
+        `;
+    });
+    document.getElementById("list-item").innerHTML = htmlArr.join("");
+})
+  .catch(error => console.error("실패:", error));
+
+
+      $(document).on('click' , '.best-cart' , function(e){
+        e.preventDefault();
+        const id = $(this).data("id");
+        const list = $(this).data("list");
+        openOptionModal(id,list);
+    });
+
+     $(document).on('click', '.close', function(e){
+    e.preventDefault();
+    $(this).closest(".modal").modal('hide');
+ });
+
+
+
+});//jquery
+
+function openOptionModal(id, list) {
+    // JSON 파일 경로 설정
+    let thislist = "";
+    if(list === "best"){
+       thislist = "js/best.json";
+    }else{
+       thislist = "js/list.json";
+    }
+   fetch(thislist)
+    .then(res => res.json())
+    .then(rs => {
+           const ct = rs.find( it => Number(it.id) === id);
+           if(!ct) throw new Error(`id=🤢 ${id} 번호에 맞는 상품을 찾을 수 없습니다.`);
+           let cartHtml = `
+            
+           `;
+           document.getElementById("optionTitle").innerHTML = `${ct.title} 상품 <small>옵션 선택</small>`;
+            let incolor = ct.color.map(co=>{
+                 return `<label><input type="radio" class="color" name="color" value="${co}"><span class="${co}"></span></label>`;
+           }).join("");
+
+            let inSize = ct.size.map( sz => {
+                return `<option value="${sz}">${sz}</option>`;
+            }).join("");
+            
+            let price = ct.price.replace(",", "");
+
+            let inForm = `<input type="hidden" id="pdtitle" name="pdtitle" value="${ct.title}">
+                          <input type="hidden" id="pdprice" name="pdprice" value="${price}">
+            `;
+           $("#cartOption").prepend(inForm);
+           $('#cpdColor').html(incolor);
+           $("#cpdSize").append(inSize);
+           $(".thimg").html(`<img src="${ct.img}" alt="${ct.alt}">`);
+           
+        })  
+    .catch(err => console.error("🤢 데이터 로딩에 실패했습니다.", err));
+
+    $("#optionModal").modal('show');
+}
+
+$(document).on("click" , "#upout" , function(){
+    let q = Number($("#optout").val());
+    let price = Number($("#pdprice").val());
+    q++;
+    price = price * q;
+    const kprice = price.toLocaleString("ko-KR");
+    $("#opuout").val(q);
+     $('#result').html(`합계 :${kprice} 원 <small>${q}개</small>`);
+});
+
+$(document).on("click" , "#upout" , function(){
+    let q = Number($("#optout").val());
+    let price = Number($("#pdprice").val());
+    q--;
+    if(q < 1) {
+        q = 1;
+    }
+    price = price * q;
+    const kprice = price.toLocaleString("ko-KR");
+    $("#opuout").val(q);
+    $("#result").html(`합계 : ${kprice} 원 <small>(${q}개)</small>`);
+});
+
+ $(document).on('change' , 'inpout[name="color"] , select[name="size"]' , allOption);
+
+function allOption () {
+    let color = $('input[name="color"]:checked').val();
+    let size = $('select[name="size"]').val();
+
+
+    if(color && size) {
+        const title = $("#pdtitle").val();
+        const price = Number($("#pdprice").val());
+        const quintity = Number($('#optqut').val());
+        const kprice = price.toLocaleString("ko-KR");
+        const rs = `${title} (색상: ${color}) - (사이즈: ${size}) : <strong>${kprice}원</strong>`;
+
+        // 최종 가격  가격 X 수량
+        const rsprice = (price * quintity).toLocaleString("ko-KR");
+        $('#result').html(`합계 :${rsprice} 원 <small>${quintity}개</small>`);
+
+        $('.setpd').html(rs);
+        $('.qyt').removeClass('d-none').addClass('d-flex');
+    }else{
+        $('.setpd').text("");
+        $('.qyt').removeClass('d-flex').addClass('d-none');
+    }
+
+}
+
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -207,3 +363,5 @@ function showSlides(n) {
     }
     slides[slideIndex-1].style.display = "block";
 }
+
+//cart 옵션 만들기
